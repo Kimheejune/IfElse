@@ -1,58 +1,43 @@
-var trailX = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-var trailY = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-
-
-
-
-
-function setup()
- {
-  createCanvas(600, 600);
+function setup() {
+  createCanvas(800, 800);
   noFill();
-  stroke(255, 100, 180);
+  stroke(255, 100, 124);
 }
 
-  function draw()
-{
-  background(120, 50, 40);
-  if (mouseX < 300) {
-  ellipse(200,200,100,100);
-}
-
-trailX[0] = (mouseX + trailX[0] * 4) / 5;
-trailY[0] = (mouseY + trailY[0] * 4) / 5;
-ellipse(trailX[0], trailY[0], 80, 80);
-
-for (var i = 1; i < 10; i = i + 1)
-{
- trailX[i] = (trailX[i-1] + trailX[i] * 4) / 5;
- trailY[i] = (trailY[i-1] + trailY[i] * 4) / 5;
- ellipse(trailX[i], trailY[i], 80, 80); 
-}
-
-
-
-
-// draw function
-if (mouseX < 300) {
-  ellipse(200, 200, 200, 200);
-} else {
-  ellipse(400, 200, 400, 400);
-}
-
-// draw function
+  function draw() {
+  background(227,226,225)
+fill(255, 100, 124);
+    //ellipse(mouseX, mouseY, 50, 50);
+    ellipse(mouseX, mouseY, 100, 100);
+  
 if (mouseX < 100) {
-  ellipse(50, 200, 100, 100);
-} else if (mouseX < 200){
-  ellipse(150, 200, 100, 100);
-} else if (mouseX < 300){
-  ellipse(250, 200, 100, 100);
-} else if (mouseX < 400){
-  ellipse(350, 200, 100, 100);
-} else if (mouseX < 500){
-  ellipse(450, 200, 100, 100);
-} else {
-  ellipse(550, 200, 100, 100);
+  fill(241, 170, 65);
+  stroke(241, 170, 65);
+  ellipse(100, 200, 100, 100);
+} 
+else if (mouseX < 200){
+  fill(229, 63, 55);
+  stroke(229, 63, 55);
+  ellipse(150, 200, 200, 200);
+} 
+else if (mouseX < 300){
+  fill(130, 187, 65);
+  stroke(130, 187, 65);
+  ellipse(250, 200, 300, 300);
 }
-
+ else if (mouseX < 400){
+  fill(34, 163, 201);
+  stroke(34, 163, 201);
+  ellipse(350, 200, 400, 400);
+}
+ else if (mouseX < 500){
+  fill(186, 38, 85);
+  stroke(186, 38, 85);
+  ellipse(450, 200, 500, 500);
+} 
+else {
+   fill(40, 176, 111);
+  stroke(40, 176, 111);
+  ellipse(550, 200, 600, 600);
+}
 }
