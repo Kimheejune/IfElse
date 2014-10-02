@@ -7,7 +7,7 @@ function setup()
 
   function draw()
 {
-  background(0);
+  background(120, 50, 40);
   if (mouseX < 300) {
   ellipse(200,200,100,100);
 }
